@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from 'vitepress'
 import { data as categories } from './categories.data'
 </script>
 
@@ -9,7 +10,7 @@ import { data as categories } from './categories.data'
       <h1>Karry 的技术博客</h1>
       <p>记录我的学习笔记、实验过程、环境配置和技术总结。</p>
       <div class="home-actions">
-        <a class="primary-action" :href="categories[0]?.links[0]">开始阅读 <span>→</span></a>
+        <a class="primary-action" :href="withBase(categories[0]?.links[0] ?? '/')">开始阅读 <span>→</span></a>
         <a class="secondary-action" href="https://github.com/karry06/tech-docs">GitHub</a>
       </div>
     </section>
@@ -24,7 +25,7 @@ import { data as categories } from './categories.data'
       </div>
 
       <div class="library-list">
-        <a v-for="category in categories" :key="category.key" class="library-row" :href="category.links[0]">
+        <a v-for="category in categories" :key="category.key" class="library-row" :href="withBase(category.links[0])">
           <span class="library-icon">{{ category.icon }}</span>
           <span class="library-copy">
             <strong>{{ category.title }}</strong>
