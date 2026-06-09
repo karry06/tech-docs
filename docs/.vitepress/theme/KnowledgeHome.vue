@@ -5,8 +5,8 @@ import { data as categories } from './categories.data'
 <template>
   <main class="knowledge-home">
     <section class="home-hero">
-      <div class="home-kicker"><span></span> PERSONAL KNOWLEDGE BASE</div>
-      <h1>Karry 的技术文档</h1>
+      <div class="home-kicker"><span></span> PERSONAL TECH BLOG</div>
+      <h1>Karry 的技术博客</h1>
       <p>记录我的学习笔记、实验过程、环境配置和技术总结。</p>
       <div class="home-actions">
         <a class="primary-action" :href="categories[0]?.links[0]">开始阅读 <span>→</span></a>
@@ -17,8 +17,8 @@ import { data as categories } from './categories.data'
     <section class="library-section">
       <div class="section-heading">
         <div>
-          <span class="section-label">LIBRARY</span>
-          <h2>知识库</h2>
+          <span class="section-label">BLOG</span>
+          <h2>文章分类</h2>
         </div>
         <span>{{ categories.length }} 个分类</span>
       </div>
@@ -35,7 +35,7 @@ import { data as categories } from './categories.data'
         </a>
       </div>
 
-      <p class="library-tip">在 <code>docs/分类目录/</code> 中新建 Markdown，导航与目录会自动更新。</p>
+      <p class="library-tip">在 <code>docs/分类目录/</code> 中新建 Markdown，首页分类与侧栏会自动更新。</p>
     </section>
   </main>
 </template>
