@@ -62,7 +62,6 @@ export default defineConfig({
     sidebar: discoverSidebars(),
     outline: { level: [2, 3], label: '本页目录' },
     docFooter: { prev: '上一篇', next: '下一篇' },
-    lastUpdated: { text: '最后更新于' },
     search: {
       provider: 'local',
       options: {
@@ -82,6 +81,5 @@ export default defineConfig({
       copyright: 'Copyright © 2026 Karry'
     }
   },
-  lastUpdated: true,
   markdown: { lineNumbers: true }
 })
